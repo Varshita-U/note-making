@@ -1,0 +1,35 @@
+{
+  "name": "jotspot",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "cd client && npm run start",
+    "client-install": "cd client && npm install",
+    "server-install": "npm install",
+    "install-all": "concurrently \"npm run client-install\" \"npm run server-install\" ",
+    "dev": "concurrently \"npm run client\" \"npm run server\" ",
+    "heroku-postbuild": "cd client && npm install && npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "build": "^0.1.4",
+    "concurrently": "^8.2.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.3.2",
+    "timeago.js": "^4.0.2"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "gh-pages": "^6.1.1",
+    "nodemon": "^3.1.0"
+  }
+}
